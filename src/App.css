@@ -1,0 +1,117 @@
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-gap: 3px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px 600px 40px;
+  grid-template-areas: 
+      ". . . h h h h h h h h h"
+      "m m m c c c c c c c c c"
+      ". f f f f f f f f f f .";
+}
+
+.header {
+  grid-area: h;
+  padding:10px;
+  margin:10px;
+  font-family: Georgia, serif;
+}
+
+.sidebar {
+  grid-area: m;
+  display: flex;
+  flex-direction: row;
+justify-content:center;
+
+}
+
+.content {
+  grid-area: c;
+  padding:10px;
+  margin:10px;
+}
+
+.footer {
+  grid-area: f;
+  text-align: center;
+}
+
+a {
+  margin: 0px 10px ;
+  color:black;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap:10px;
+}
+
+.noteElements {
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap:30px;
+  padding: 5px 20px 5px 20px;
+  margin:5px;
+  
+}
+
+.noteElementsActive{
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap:30px;
+  padding: 5px 20px 5px 20px;
+  margin:5px;
+}
+.noteElement {
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap:30px;
+
+}
+
+.deleteNote{
+  cursor: pointer;
+}
+
+.noteTitle {
+  width: 30%;
+  padding: 5px 20px;
+  border-style: none;
+  margin-bottom: 10px;
+  font-size: 20px;
+ 
+}
+.noteTitle:focus {
+  outline-style: none;
+  border: 3px solid aquamarine;
+  font-size: 21px;
+  
+}
+.noteContent{
+  width: 90%;
+  height: 200px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+.noteContent:focus {
+  outline-style: none;
+  border: 3px solid aquamarine;
+  font-size: 18px;
+ 
+}
+
